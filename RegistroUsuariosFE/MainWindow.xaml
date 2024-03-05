@@ -1,0 +1,16 @@
+﻿<Window x:Class="RegistroUsuarios.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registro de Usuarios" Height="350" Width="500">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBox x:Name="txtNombre" Text="{Binding Usuario.Nombre, UpdateSourceTrigger=PropertyChanged}" Margin="5" ToolTip="Nombre"/>
+            <TextBox x:Name="txtApellidoPaterno"  Text="{Binding Usuario.ApellidoPaterno, UpdateSourceTrigger=PropertyChanged}" Margin="5" ToolTip="Apellido Paterno"/>
+            <TextBox x:Name="txtApellidoMaterno" Text="{Binding Usuario.ApellidoMaterno, UpdateSourceTrigger=PropertyChanged}" Margin="5" ToolTip="Apellido Materno"/>
+            <TextBox x:Name="txtIdentificacion" Text="{Binding Usuario.Identificacion, UpdateSourceTrigger=PropertyChanged}" Margin="5" ToolTip="Identificación"/>
+            <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" Margin="5"/>
+            <Button Content="Registrar" Click="Registrar_Click"/>
+            <TextBlock x:Name="txtMensaje" Text="" Foreground="Red" Margin="0 10"/>
+        </StackPanel>
+    </Grid>
+</Window>
